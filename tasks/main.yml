@@ -1,6 +1,8 @@
 
 - name: install mapr-cldb packages
   yum: name='{{item}}' state=present
+  sudo: yes
+  sudo_user: root
   with_items:
     - mapr-cldb
   environment: proxy_env
